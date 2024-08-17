@@ -1,0 +1,233 @@
+school-website/
+│
+├── index.html          # Home Page
+├── about.html          # About Us Page
+├── contact.html        # Contact Us Page
+│
+├── css/
+│   └── styles.css      # Stylesheet
+│
+└── js/
+    └── scripts.js      # JavaScript (Optional)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Name | Home</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to School Name</h1>
+        <p>Providing quality education since [Year]</p>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Academics</h2>
+            <p>We offer a wide range of courses to cater to students' needs.</p>
+        </div>
+        <div class="feature">
+            <h2>Extracurricular Activities</h2>
+            <p>Encouraging students to excel in both academics and sports.</p>
+        </div>
+        <div class="feature">
+            <h2>Admissions</h2>
+            <p>Learn about our admission process and how to apply.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 School Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Name | About Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about">
+        <h1>About School Name</h1>
+        <p>School Name has been committed to providing quality education to students since [Year].</p>
+        <p>Our mission is to nurture young minds and help them achieve their full potential.</p>
+        <p>Our school offers a balanced education with a strong emphasis on both academics and extracurricular activities.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 School Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Name | Contact Us</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <p>For more information, please reach out to us:</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 School Name. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.about, .contact {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #005bb5;
+}
+document.querySelector('form').addEventListener('submit', function(event) {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+        alert('Please fill out all fields.');
+        event.preventDefault();
+    }
+});
